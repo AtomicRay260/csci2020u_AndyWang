@@ -21,6 +21,5 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    implementation 'com.walterjwhite.java.modules.csv.modules:apache-commons-csv:0.0.17'
     implementation 'org.apache.commons:commons-csv:1.8'
 }
