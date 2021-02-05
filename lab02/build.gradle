@@ -1,1 +1,26 @@
+plugins{
+    id 'java'
+    id 'application'
+}
 
+mainClassName = 'csci2020u.lab02.SimpleTest'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'SimpleTest',
+            'Implementation-Title': 'Sample-Gradle-Test',
+            'Implementation-Version': '0.1.0'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    implementation 'com.walterjwhite.java.modules.csv.modules:apache-commons-csv:0.0.17'
+    implementation 'org.apache.commons:commons-csv:1.8'
+}

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Main-Class: SimpleTest
+Implementation-Title: Sample-Gradle-Test
+Implementation-Version: 0.1.0
+
