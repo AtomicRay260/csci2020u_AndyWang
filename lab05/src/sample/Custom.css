@@ -1,0 +1,7 @@
+.mainBackground{
+    -fx-background-color: #00DAFB
+}
+
+.errorMesg{
+    -fx-text-color: red
+}
