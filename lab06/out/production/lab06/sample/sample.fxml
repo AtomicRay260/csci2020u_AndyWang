@@ -1,0 +1,22 @@
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.PieChart?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <BarChart fx:id="barChart" GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <xAxis>
+            <CategoryAxis fx:id="barXAxis" side="BOTTOM"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="barYAxis" side="LEFT"/>
+        </yAxis>
+    </BarChart>
+
+    <PieChart fx:id="pieChart" GridPane.rowIndex="0" GridPane.columnIndex="1">
+
+    </PieChart>
+
+</GridPane>
