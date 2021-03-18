@@ -1,0 +1,9 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.chart.PieChart?>
+
+<BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml"
+        prefWidth="500" prefHeight="500">
+    <center>
+        <PieChart fx:id="pieChart" title="Warning Type"/>
+    </center>
+</BorderPane>
