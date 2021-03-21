@@ -1,0 +1,90 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.MenuBar?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
+<BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml"
+            prefHeight="400" prefWidth="500">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem text="New" onAction="#generateNewTable"/>
+                <MenuItem text="Open" onAction="#load"/>
+                <MenuItem text="Save" onAction="#save"/>
+                <MenuItem text="Save As..." onAction="#saveAs"/>
+            </Menu>
+            <Menu text="Application">
+                <MenuItem text="Settings"/>
+                <MenuItem text="Exit" onAction="#attemptExit"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane fx:id="mainGridPane" styleClass="mainBackground"
+                  hgap="10" vgap="10" alignment="CENTER">
+            <!--Applying Style Sheet-->
+            <stylesheets>
+                <URL value="@Custom.css" />
+            </stylesheets>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+
+            <!--Labeling pane-->
+            <TableView fx:id="tableView" GridPane.rowIndex="0" GridPane.columnIndex="0">
+                <columns>
+                    <TableColumn text = "StudentId" prefWidth="100">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="studentId"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text = "Assignment" prefWidth="80">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="assignment"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text = "Midterm" prefWidth="80">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="midterm"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text = "Final Exam" prefWidth="80">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="finalExam"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text = "Final Mark" prefWidth="80">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="finalGrade"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn text = "Letter Grade" prefWidth="50">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="gradeLetter"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+
+            <HBox fx:id="inputBox" GridPane.rowIndex="1" GridPane.columnIndex="0" alignment="CENTER" spacing="5">
+                <TextField fx:id="studentIdField" promptText="Student Id" prefWidth="120"/>
+                <TextField fx:id="assignmentField" promptText="Assignment" prefWidth="80"/>
+                <TextField fx:id="midtermField" promptText="Midterm" prefWidth="80"/>
+                <TextField fx:id="finalExamField" promptText="Final Exam" prefWidth="80"/>
+                <Button fx:id="addDataButton" text="Add" onAction="#addStudentFromUi"/>
+            </HBox>
+        </GridPane>
+    </center>
+</BorderPane>
