@@ -1,0 +1,11 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.canvas.Canvas?>
+
+<?import javafx.scene.Group?>
+<BorderPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
+    <center>
+        <Group>
+            <Canvas fx:id="chartCanvas" width="800" height="600"/>
+        </Group>
+    </center>
+</BorderPane>
